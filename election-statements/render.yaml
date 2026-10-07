@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: rhys-harmer-election-statement
+    runtime: static
+    buildCommand: echo "Static files ready"
+    staticPublishPath: ./rhys-harmer
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
+  - type: web
+    name: glen-hart-election-statement
+    runtime: static
+    buildCommand: echo "Static files ready"
+    staticPublishPath: ./glen-hart
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
